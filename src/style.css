@@ -1,0 +1,19 @@
+@import "./css/variables.css";
+@import "./css/base.css";
+@import "./css/animations.css";
+
+@import "./css/loader.css";
+
+@import "./css/welcome.css";
+@import "./css/hero.css";
+@import "./css/countdown.css";
+@import "./css/gift.css";
+@import "./css/gift.css";
+@import "./css/gallery.css";
+@import "./css/story.css";
+@import "./css/wishes.css";
+@import "./css/cake.css";
+@import "./css/finale.css";
+@import "./css/navbar.css";
+
+@import "./css/responsive.css";

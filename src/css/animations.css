@@ -1,0 +1,19 @@
+@keyframes heartbeat{
+
+0%,100%{
+
+transform:
+rotate(45deg)
+scale(1);
+
+}
+
+50%{
+
+transform:
+rotate(45deg)
+scale(1.12);
+
+}
+
+}
