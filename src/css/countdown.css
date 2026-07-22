@@ -1,0 +1,269 @@
+/* ===================================
+   COUNTDOWN SECTION
+=================================== */
+
+#countdown{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:100px 20px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top,
+        rgba(255,105,180,.10),
+        transparent 35%),
+
+        radial-gradient(circle at bottom,
+        rgba(210,145,255,.08),
+        transparent 40%);
+
+}
+
+/* ============================= */
+
+#countdown .container{
+
+    width:100%;
+    max-width:1200px;
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+/* ============================= */
+
+.countdown-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:var(--accent);
+
+    margin-bottom:20px;
+
+}
+
+/* ============================= */
+
+.countdown-title{
+
+    font-size:clamp(2rem,6vw,4rem);
+
+    color:white;
+
+    margin-bottom:18px;
+
+}
+
+/* ============================= */
+
+.countdown-subtitle{
+
+    max-width:650px;
+
+    margin:0 auto 50px;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+/* ============================= */
+
+.countdown-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+.countdown-button{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:50px;
+
+}
+
+/* ============================= */
+
+.time-card{
+
+    padding:35px 20px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+
+/* ============================= */
+
+.time-card h3{
+
+    font-size:clamp(2.5rem,8vw,4rem);
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+}
+
+/* ============================= */
+
+.time-card span{
+
+    color:var(--text-light);
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/* =============================
+   TABLET
+============================= */
+
+@media(min-width:768px){
+
+.countdown-grid{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+.time-card{
+
+padding:45px 25px;
+
+}
+
+}
+
+/* =============================
+   DESKTOP
+============================= */
+
+@media(min-width:1024px){
+
+#countdown{
+
+padding:140px 20px;
+
+}
+
+.time-card h3{
+
+font-size:4.5rem;
+
+}
+
+}
+
+/* ===================================
+   Birthday Message
+=================================== */
+
+.birthday-message{
+
+    font-size:clamp(2rem,7vw,4rem);
+
+    color:var(--primary);
+
+    text-align:center;
+
+    font-weight:700;
+
+    animation:pulse 2s infinite;
+
+}
+#goToGift{
+
+    display:block;
+
+    width:fit-content;
+
+    margin:50px auto 0;
+
+    padding:16px 34px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ff7eb3,#ff4d94);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#goToGift:hover{
+
+    transform:translateY(-4px);
+
+}
+
+@media(max-width:768px){
+
+    #goToGift{
+
+        width:90%;
+
+        max-width:320px;
+
+    }
+
+}
+@media(max-width:768px){
+
+    #countdown{
+
+        min-height:auto;
+
+        padding:30px 20px 50px;
+
+        justify-content:flex-start;
+
+        align-items:stretch;
+
+    }
+
+}

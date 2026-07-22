@@ -12,25 +12,45 @@ scroll-behavior:smooth;
 
 body{
 
-font-family:
-
-Poppins,
-sans-serif;
+font-family:"Poppins",sans-serif;
 
 background:
+
+radial-gradient(circle at top,
+rgba(255,105,180,.12),
+transparent 30%),
+
+radial-gradient(circle at bottom,
+rgba(210,145,255,.10),
+transparent 40%),
 
 linear-gradient(
 180deg,
 var(--bg),
-var(--bg2));
+var(--bg2),
+var(--bg3));
 
-color:
-
-var(--text);
+color:var(--text);
 
 overflow-x:hidden;
 
 min-height:100vh;
+
+}
+
+/* Typography */
+
+h1,h2,h3{
+
+font-family:"Cinzel",serif;
+
+font-weight:700;
+
+}
+
+p{
+
+line-height:1.8;
 
 }
 
@@ -57,5 +77,69 @@ border:none;
 width:min(1200px,92%);
 
 margin:auto;
+
+}
+/* ===================================
+   MOBILE SAFE AREA
+=================================== */
+
+body{
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+/* ===================================
+   CHAPTER TRANSITION
+=================================== */
+
+.fade-out{
+
+    animation:fadeOut .8s forwards;
+
+}
+
+.fade-in{
+
+    animation:fadeIn .8s forwards;
+
+}
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:scale(.98);
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }

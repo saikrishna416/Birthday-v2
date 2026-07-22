@@ -1,19 +1,73 @@
 @import "./css/variables.css";
 @import "./css/base.css";
 @import "./css/animations.css";
-
 @import "./css/loader.css";
-
 @import "./css/welcome.css";
 @import "./css/hero.css";
 @import "./css/countdown.css";
-@import "./css/gift.css";
 @import "./css/gift.css";
 @import "./css/gallery.css";
 @import "./css/story.css";
 @import "./css/wishes.css";
 @import "./css/cake.css";
 @import "./css/finale.css";
-@import "./css/navbar.css";
 
-@import "./css/responsive.css";
+.music-toggle{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    color:white;
+
+    font-size:1.4rem;
+
+    cursor:pointer;
+
+    z-index:999999;
+
+    transition:.3s;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+
+}
+
+.music-toggle:hover{
+
+    transform:scale(1.1);
+
+    background:rgba(255,255,255,.25);
+
+}
+
+@media(max-width:768px){
+
+    .music-toggle{
+
+        width:48px;
+
+        height:48px;
+
+        top:15px;
+
+        right:15px;
+
+        font-size:1.2rem;
+
+    }
+
+}

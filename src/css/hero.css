@@ -1,0 +1,432 @@
+/* ===================================
+   HERO SECTION
+=================================== */
+
+#hero{
+    position:relative;
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:90px 20px 60px;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(255,105,180,.12),
+    transparent 35%),
+
+    radial-gradient(circle at bottom,
+    rgba(210,145,255,.08),
+    transparent 45%);
+}
+
+/* Hide initially */
+
+/* ===================================
+   BACKGROUND
+=================================== */
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+/* Moon */
+
+.moon{
+
+    position:absolute;
+
+    top:70px;
+    right:40px;
+
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    background:#FFF8DC;
+
+    box-shadow:
+        0 0 40px rgba(255,248,220,.8),
+        0 0 100px rgba(255,248,220,.4);
+
+    opacity:.9;
+
+}
+
+/* ===================================
+   STARS
+=================================== */
+
+.stars span{
+
+position:absolute;
+
+width:4px;
+height:4px;
+
+border-radius:50%;
+
+background:#FFD54F;
+
+box-shadow:
+0 0 10px #FFD54F;
+
+animation:
+twinkle 2.5s infinite;
+
+}
+
+.stars span:nth-child(1){top:8%;left:12%;}
+.stars span:nth-child(2){top:18%;left:70%;}
+.stars span:nth-child(3){top:30%;left:85%;}
+.stars span:nth-child(4){top:50%;left:20%;}
+.stars span:nth-child(5){top:65%;left:75%;}
+.stars span:nth-child(6){top:82%;left:40%;}
+.stars span:nth-child(7){top:25%;left:45%;}
+.stars span:nth-child(8){top:90%;left:88%;}
+
+/* ===================================
+   CONTAINER
+=================================== */
+
+.hero-container{
+
+position:relative;
+
+z-index:2;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:50px;
+
+}
+
+/* ===================================
+   TEXT
+=================================== */
+
+.hero-content{
+
+text-align:center;
+
+max-width:600px;
+
+}
+
+.hero-badge{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+color:var(--accent);
+
+margin-bottom:25px;
+
+font-size:.9rem;
+
+}
+
+.hero-content h1{
+
+font-size:clamp(2.2rem,8vw,4.5rem);
+
+line-height:1.2;
+
+}
+
+.hero-content h1 span{
+
+display:block;
+
+color:var(--primary);
+
+}
+
+.hero-content h2{
+
+margin-top:15px;
+
+font-size:clamp(2rem,7vw,3.5rem);
+
+color:white;
+
+}
+
+.hero-description{
+
+margin:25px auto;
+
+max-width:500px;
+
+color:var(--text-light);
+
+font-size:1rem;
+
+line-height:1.8;
+
+}
+
+/* ===================================
+   INFO
+=================================== */
+
+.hero-details{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+margin-top:35px;
+
+}
+
+.detail-card{
+
+width:140px;
+
+padding:18px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+}
+
+.detail-card h3{
+
+color:var(--accent);
+
+font-size:.9rem;
+
+margin-bottom:8px;
+
+}
+
+.detail-card p{
+
+font-weight:600;
+
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+#beginJourney{
+
+margin-top:35px;
+
+padding:16px 32px;
+
+border:none;
+
+border-radius:50px;
+
+background:
+linear-gradient(
+135deg,
+var(--primary),
+var(--secondary));
+
+color:white;
+
+font-weight:600;
+
+font-size:1rem;
+
+box-shadow:
+0 15px 35px rgba(255,105,180,.35);
+
+transition:.35s;
+
+}
+
+#beginJourney:hover{
+
+transform:translateY(-4px);
+
+}
+
+/* ===================================
+   PHOTO
+=================================== */
+
+.hero-image{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.photo-frame{
+    width:100%;
+    max-width:380px;
+    aspect-ratio:3/4;
+    position: relative;
+    padding:12px;
+
+    border-radius:32px;
+
+    background:rgba(255,255,255,.08);
+
+    border:2px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 20px 60px rgba(255,105,180,.35),
+        0 0 40px rgba(210,145,255,.25);
+
+    overflow:hidden;
+}
+.photo-frame::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-20px;
+
+    border-radius:40px;
+
+    background:radial-gradient(
+        circle,
+        rgba(255,105,180,.35),
+        transparent 70%
+    );
+
+    z-index:-1;
+
+    filter:blur(25px);
+
+}
+
+.photo-frame img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:24px;
+}
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media(min-width:768px){
+
+.photo-frame{
+
+width:380px;
+
+}
+
+.hero-content{
+
+max-width:700px;
+
+}
+
+}
+
+/* ===================================
+   DESKTOP
+=================================== */
+
+@media(min-width:1024px){
+
+.hero-container{
+
+flex-direction:row;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.hero-content{
+
+text-align:left;
+
+}
+
+.hero-details{
+
+justify-content:flex-start;
+
+}
+
+.photo-frame{
+
+width:430px;
+
+}
+
+.moon{
+
+width:180px;
+height:180px;
+
+}
+
+}
+/* Hide Hero until Welcome finishes */
+
+.hero.hidden{
+    display:none;
+}
+
+.hero.show{
+    display:flex;
+    animation:heroFade .8s ease;
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+

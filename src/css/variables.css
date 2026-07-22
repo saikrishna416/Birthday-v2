@@ -1,26 +1,38 @@
 :root{
 
+/* Background */
+
 --bg:#0F0A1F;
---bg2:#1B1235;
+--bg2:#1A1033;
+--bg3:#25174A;
+
+/* Theme */
 
 --primary:#FF69B4;
 --secondary:#D291FF;
 --accent:#FFD54F;
 
---white:#FFFFFF;
+/* Text */
 
+--white:#FFFFFF;
 --text:#F6F3FF;
---text-light:#D8D2EA;
+--text-light:#D9D2EB;
+
+/* Glass */
 
 --glass:rgba(255,255,255,.08);
+--glass-border:rgba(255,255,255,.15);
 
---glass-border:
-rgba(255,255,255,.15);
+/* Radius */
 
 --radius:28px;
 
+/* Shadow */
+
 --shadow:
 0 20px 50px rgba(0,0,0,.35);
+
+/* Transition */
 
 --transition:.35s ease;
 

@@ -1,21 +1,34 @@
 export function Loader() {
   return `
-    <section id="loader">
+  <section id="loader">
 
-      <div class="loader-stars"></div>
+    <div class="loader-glow"></div>
 
-      <div class="loader-content">
+    <div class="stars">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-        <div class="heart"></div>
+    <div class="loader-content">
 
-        <h1>Happy 3rd Birthday</h1>
+      <div class="heart">
 
-        <h2>Harini</h2>
-
-        <p>Preparing a magical surprise...</p>
+        <span>H</span>
 
       </div>
 
-    </section>
+      <h1>Happy 3rd Birthday</h1>
+
+      <h2>Harini</h2>
+
+      <p>✨ Preparing a magical surprise...</p>
+
+    </div>
+
+  </section>
   `;
 }

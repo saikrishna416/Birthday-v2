@@ -13,61 +13,80 @@ overflow:hidden;
 background:
 
 radial-gradient(circle at top,
-rgba(255,105,180,.15),
-transparent 40%),
+rgba(255,105,180,.18),
+transparent 30%),
+
+radial-gradient(circle at bottom,
+rgba(210,145,255,.12),
+transparent 45%),
 
 linear-gradient(
 180deg,
 #0F0A1F,
-#1B1235,
-#24174A);
+#1A1033,
+#25174A);
 
 }
+
+/* Pink Glow */
 
 .loader-glow{
 
 position:absolute;
 
-width:350px;
-height:350px;
+width:420px;
+height:420px;
 
 border-radius:50%;
 
 background:
-
 radial-gradient(circle,
-rgba(255,105,180,.25),
+rgba(255,105,180,.22),
 transparent 70%);
 
-filter:blur(30px);
+filter:blur(35px);
+
+animation:
+float 6s ease-in-out infinite;
 
 }
+
+/* Content */
 
 .loader-content{
 
 position:relative;
 
-text-align:center;
+z-index:5;
 
-z-index:2;
+text-align:center;
 
 }
 
+/* Heart */
+
 .heart{
 
-width:90px;
-height:90px;
+width:100px;
+height:100px;
 
 margin:auto;
 
 background:#FF69B4;
 
-position:relative;
-
 transform:rotate(45deg);
 
+position:relative;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
 animation:
-heartbeat 1.2s infinite;
+pulse 1.3s infinite;
+
+box-shadow:
+0 0 35px rgba(255,105,180,.55);
 
 }
 
@@ -78,8 +97,8 @@ content:"";
 
 position:absolute;
 
-width:90px;
-height:90px;
+width:100px;
+height:100px;
 
 background:#FF69B4;
 
@@ -89,15 +108,36 @@ border-radius:50%;
 
 .heart::before{
 
-left:-45px;
+left:-50px;
 
 }
 
 .heart::after{
 
-top:-45px;
+top:-50px;
 
 }
+
+.heart span{
+
+position:absolute;
+
+transform:
+rotate(-45deg);
+
+font-size:2rem;
+
+font-weight:700;
+
+color:white;
+
+font-family:"Cinzel",serif;
+
+z-index:2;
+
+}
+
+/* Heading */
 
 .loader-content h1{
 
@@ -110,12 +150,12 @@ clamp(2rem,7vw,4rem);
 
 .loader-content h2{
 
-margin-top:12px;
-
-color:#FF69B4;
+margin-top:10px;
 
 font-size:
-clamp(1.6rem,6vw,3rem);
+clamp(1.8rem,6vw,3rem);
+
+color:#FF69B4;
 
 }
 
@@ -123,6 +163,92 @@ clamp(1.6rem,6vw,3rem);
 
 margin-top:18px;
 
-color:var(--text-light);
+font-size:1rem;
+
+color:#D9D2EB;
+
+}
+
+/* Stars */
+
+.stars span{
+
+position:absolute;
+
+width:5px;
+height:5px;
+
+background:#FFD54F;
+
+border-radius:50%;
+
+box-shadow:
+0 0 10px #FFD54F;
+
+animation:
+twinkle 2.5s infinite;
+
+}
+
+.stars span:nth-child(1){
+
+top:18%;
+left:25%;
+
+}
+
+.stars span:nth-child(2){
+
+top:24%;
+right:24%;
+
+animation-delay:.5s;
+
+}
+
+.stars span:nth-child(3){
+
+top:70%;
+left:18%;
+
+animation-delay:1s;
+
+}
+
+.stars span:nth-child(4){
+
+top:76%;
+right:18%;
+
+animation-delay:1.5s;
+
+}
+
+.stars span:nth-child(5){
+
+top:40%;
+left:12%;
+
+animation-delay:2s;
+
+}
+
+.stars span:nth-child(6){
+
+top:45%;
+right:12%;
+
+animation-delay:2.5s;
+
+}
+.loader-content{
+
+will-change:transform,opacity;
+
+}
+
+.heart{
+
+will-change:transform;
 
 }

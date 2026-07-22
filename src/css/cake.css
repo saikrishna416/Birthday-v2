@@ -1,0 +1,221 @@
+#cake{
+
+    min-height:100vh;
+
+    padding:80px 20px;
+
+    text-align:center;
+
+}
+
+.cake-wrapper{
+
+    width:280px;
+
+    margin:70px auto;
+
+    position:relative;
+
+}
+
+.candles{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:45px;
+
+    margin-bottom:-5px;
+
+}
+
+.candle{
+
+    width:12px;
+
+    height:70px;
+
+    background:#fff;
+
+    border-radius:6px;
+
+    position:relative;
+
+    cursor:pointer;
+
+}
+
+.flame{
+
+    position:absolute;
+
+    top:-18px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:16px;
+
+    height:20px;
+
+    background:gold;
+
+    border-radius:50% 50% 50% 50%;
+
+    box-shadow:0 0 20px gold;
+
+    animation:flicker .4s infinite alternate;
+
+}
+
+@keyframes flicker{
+
+from{
+
+transform:translateX(-50%) scale(.9);
+
+}
+
+to{
+
+transform:translateX(-50%) scale(1.1);
+
+}
+
+}
+
+.cake-top{
+
+height:55px;
+
+background:#ff9fc7;
+
+border-radius:18px;
+
+margin:0 auto;
+
+width:140px;
+
+}
+
+.cake-middle{
+
+height:70px;
+
+background:#ff74b2;
+
+border-radius:18px;
+
+margin:10px auto;
+
+width:200px;
+
+}
+
+.cake-bottom{
+
+height:90px;
+
+background:#ff4d94;
+
+border-radius:18px;
+
+width:280px;
+
+}
+.candle.off{
+
+    opacity:.5;
+
+}
+
+#cutCake{
+
+    margin-top:40px;
+
+}
+/* ===========================
+   CAKE CUT
+=========================== */
+
+.cake{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+}
+
+.cake{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    transition:.5s;
+
+}
+
+.cut-line{
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    width:4px;
+
+    height:0;
+
+    background:white;
+
+    border-radius:10px;
+
+    transform:translateX(-50%);
+
+    transition:.8s ease;
+
+}
+
+.cake.cut{
+
+    animation:cakeBounce .6s ease;
+
+}
+
+.cake.cut .cut-line{
+
+    height:100%;
+
+}
+
+@keyframes cakeBounce{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(.95);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}

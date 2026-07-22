@@ -1,0 +1,241 @@
+/* ==========================
+   GIFT SECTION
+========================== */
+
+#gift{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 20px;
+
+}
+
+#gift .container{
+
+    width:100%;
+
+    max-width:1200px;
+
+    text-align:center;
+
+}
+
+.gift-tag{
+
+    color:var(--accent);
+
+    display:inline-block;
+
+    margin-bottom:15px;
+
+}
+
+.gift-title{
+
+    font-size:clamp(2rem,6vw,4rem);
+
+    margin-bottom:20px;
+
+}
+
+.gift-text{
+
+    color:var(--text-light);
+
+    margin-bottom:50px;
+
+}
+
+/* Gift Box */
+
+.gift-box{
+
+    position:relative;
+
+    width:180px;
+
+    height:180px;
+
+    margin:auto;
+
+    cursor:pointer;
+
+}
+
+.gift-body{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:180px;
+
+    height:120px;
+
+    background:#ff5ea8;
+
+    border-radius:10px;
+
+}
+
+.gift-lid{
+
+    position:absolute;
+
+    top:20px;
+
+    width:180px;
+
+    height:40px;
+
+    background:#ff78b9;
+
+    border-radius:10px;
+
+    transition:.6s;
+
+}
+
+.gift-ribbon-v{
+
+    position:absolute;
+
+    left:82px;
+
+    width:16px;
+
+    height:180px;
+
+    background:white;
+
+}
+
+.gift-ribbon-h{
+
+    position:absolute;
+
+    top:72px;
+
+    width:180px;
+
+    height:16px;
+
+    background:white;
+
+}
+
+/* Message */
+
+.gift-message{
+
+    margin-top:50px;
+
+    max-width:650px;
+
+    margin-inline:auto;
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.6s;
+
+    color:white;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+/* Open */
+
+.gift-box.open .gift-lid{
+
+    transform:
+        rotate(-15deg)
+        translateY(-45px);
+
+}
+
+.gift-message.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* Tablet */
+
+@media(min-width:768px){
+
+.gift-box{
+
+width:220px;
+
+height:220px;
+
+}
+
+.gift-body{
+
+width:220px;
+
+height:150px;
+
+}
+
+.gift-lid{
+
+width:220px;
+
+}
+
+.gift-ribbon-h{
+
+width:220px;
+
+}
+
+.gift-ribbon-v{
+
+left:102px;
+
+}
+
+}
+
+/* Desktop */
+
+@media(min-width:1024px){
+
+.gift-title{
+
+font-size:4rem;
+
+}
+
+}
+.gift-image{
+    width:100%;
+    max-width:320px;
+    margin:auto;
+    cursor:pointer;
+    transition:0.35s ease;
+}
+
+.gift-image img{
+    width:100%;
+    display:block;
+}
+
+.gift-image:hover{
+    transform:scale(1.05);
+}
