@@ -9,7 +9,7 @@ export function Cake() {
         </span>
 
         <h2 class="cake-title">
-          Happy 3rd Birthday Harini
+          Happy 4th Birthday Harini
         </h2>
 
         <p class="cake-text">
