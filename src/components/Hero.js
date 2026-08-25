@@ -34,13 +34,13 @@ export function Hero() {
 
           <h1>
             Happy
-            <span>3rd Birthday</span>
+            <span>4th Birthday</span>
           </h1>
 
           <h2>Harini</h2>
 
           <p class="hero-description">
-            Celebrating three magical years filled with
+            Celebrating four magical years filled with
             love, laughter, beautiful memories,
             and endless happiness.
           </p>
