@@ -27,7 +27,7 @@ export function Finale() {
         >
 
         <h1 class="final-title">
-          🎉 Happy 4th Birthday Harini 🎉
+          🎉 Happy 3rd Birthday Harini 🎉
         </h1>
 
         <p class="final-text">
