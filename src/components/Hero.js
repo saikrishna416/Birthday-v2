@@ -34,7 +34,7 @@ export function Hero() {
 
           <h1>
             Happy
-            <span>4th Birthday</span>
+            <span>3rd Birthday</span>
           </h1>
 
           <h2>Harini</h2>
